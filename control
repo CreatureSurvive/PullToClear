@@ -1,0 +1,10 @@
+Package: com.creaturecoding.pulltoclear
+Name: PullToClear
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: CreatureSurvive
+Depiction: https://creaturesurvive.com/depictions/com.creaturecoding.pulltoclear/index.htmls
+Author: CreatureSurvive
+Section: Tweaks

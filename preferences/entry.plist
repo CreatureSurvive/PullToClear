@@ -1,0 +1,16 @@
+{
+  entry = {
+	bundle = PullToClear;
+	cell = PSLinkCell;
+	detail = CSPListController;
+	icon = icon.png;
+	isController = 1;
+	label = PullToClear;
+	headerString = "PullToClear\nby: CreatureSurvive";
+  headerFont = ".SFUIDisplay-Regular";
+  primaryFontSize = 36;
+  secondaryFontSize = 17;
+  primaryColor = "#c46258";
+  secondaryColor = "#5c5555";
+    };
+}
