@@ -38,7 +38,9 @@
 				<key>key</key>
 				<string>kPTCActivationHeight</string>
 				<key>label</key>
-				<string>Activation Height</string>
+				<string>Release Height</string>
+				<key>description</key>
+				<string>Release To Clear Height:\n\nThe height at which the Release string will pop up</string>
 				<key>placeholder</key>
 				<string>40</string>
 				<key>seporatorHidden</key>
@@ -48,6 +50,7 @@
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
 			</dict>
+			
 			<dict>
 				<key>cell</key>
 				<string>PSSliderCell</string>
@@ -67,6 +70,62 @@
 				<string></string>
 				<key>showValue</key>
 				<false/>
+				<key>description</key>
+				<string>Release To Clear Height:\n\nThe drag distance at which the Release string will pop up</string>
+				<key>PostNotification</key>
+				<string>com.creaturecoding.PullToClear.prefschanged</string>
+				<key>defaults</key>
+				<string>com.creaturecoding.PullToClear</string>
+			</dict>
+			
+			<dict>
+				<key>cell</key>
+				<string>PSEditTextCell</string>
+				<key>default</key>
+				<string>150</string>
+				<key>detail</key>
+				<string>PSDetailController</string>
+				<key>height</key>
+				<string>30</string>
+				<key>isDecimalPad</key>
+				<true/>
+				<key>key</key>
+				<string>kPTCClearHeight</string>
+				<key>label</key>
+				<string>Clear Height</string>
+				<key>description</key>
+				<string>Clear Notifications Height:\n\nThe drag distace at which the notifications will be cleared</string>
+				<key>placeholder</key>
+				<string>40</string>
+				<key>seporatorHidden</key>
+				<true/>
+				<key>PostNotification</key>
+				<string>com.creaturecoding.PullToClear.prefschanged</string>
+				<key>defaults</key>
+				<string>com.creaturecoding.PullToClear</string>
+			</dict>
+			
+			<dict>
+				<key>cell</key>
+				<string>PSSliderCell</string>
+				<key>default</key>
+				<real>40</real>
+				<key>isContinuous</key>
+				<true/>
+				<key>key</key>
+				<string>kPTCClearHeight</string>
+				<key>leftImage</key>
+				<string></string>
+				<key>max</key>
+				<real>100</real>
+				<key>min</key>
+				<real>0.0</real>
+				<key>rightImage</key>
+				<string></string>
+				<key>showValue</key>
+				<false/>
+				<key>description</key>
+				<string>Clear Notifications Height:\n\nThe drag distace at which the notifications will be cleared</string>
 				<key>PostNotification</key>
 				<string>com.creaturecoding.PullToClear.prefschanged</string>
 				<key>defaults</key>
@@ -130,6 +189,44 @@
 				<string>kPTCFontColor</string>
 				<key>label</key>
 				<string>Font Color</string>
+			</dict>
+			
+			<dict>
+				<key>cell</key>
+				<string>PSEditTextCell</string>
+				<key>default</key>
+				<string>Release To Clear</string>
+				<key>detail</key>
+				<string>PSDetailController</string>
+				<key>key</key>
+				<string>kPTCReleaseString</string>
+				<key>label</key>
+				<string>Release String</string>
+				<key>placeholder</key>
+				<string>Release to Clear</string>
+				<key>PostNotification</key>
+				<string>com.creaturecoding.PullToClear.prefschanged</string>
+				<key>defaults</key>
+				<string>com.creaturecoding.PullToClear</string>
+			</dict>
+			
+			<dict>
+				<key>cell</key>
+				<string>PSEditTextCell</string>
+				<key>default</key>
+				<string>Pull To Clear</string>
+				<key>detail</key>
+				<string>PSDetailController</string>
+				<key>key</key>
+				<string>kPTCPullString</string>
+				<key>label</key>
+				<string>Pull String</string>
+				<key>placeholder</key>
+				<string>Pull To Clear</string>
+				<key>PostNotification</key>
+				<string>com.creaturecoding.PullToClear.prefschanged</string>
+				<key>defaults</key>
+				<string>com.creaturecoding.PullToClear</string>
 			</dict>
 
 		</array>

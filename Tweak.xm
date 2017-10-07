@@ -33,6 +33,8 @@
 %hook NCNotificationListViewController
 %property(nonatomic, retain) UILabel *refreshLabel;
 %property(nonatomic, retain) UIColor *refreshColor;
+%property(nonatomic, retain) NSString *pullString;
+%property(nonatomic, retain) NSString *releaseString;
 %property(nonatomic, assign) BOOL isRefreshing;
 %property(nonatomic, assign) BOOL isClearing;
 
@@ -47,7 +49,6 @@
 
         self.refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.collectionView.frame.size.width, [[PTCProvider sharedProvider] floatForKey:@"kPTCActivationHeight"])];
         self.refreshLabel.textAlignment = NSTextAlignmentCenter;
-        self.refreshLabel.text = @"Pull To Clear";
         self.refreshLabel.font = [UIFont loadFontWithName:fontName size:fontSize] ? : [UIFont systemFontOfSize:17];
         [self.collectionView addSubview:self.refreshLabel];
     }
@@ -60,9 +61,11 @@
     self.collectionView.alpha = 1;
     CGFloat fontSize = [[PTCProvider sharedProvider] floatForKey:@"kPTCFontSize"] ? : 17.0f;
     NSString *fontName = [[PTCProvider sharedProvider] stringForKey:@"kPTCFontName"] ? : @".SFUIDisplay-Regular";
-
+    self.pullString = [[PTCProvider sharedProvider] objectForKey:@"kPTCPullString"];
+    self.releaseString = [[PTCProvider sharedProvider] objectForKey:@"kPTCReleaseString"];
     self.refreshLabel.font = [UIFont loadFontWithName:fontName size:fontSize] ? : [UIFont systemFontOfSize:17];
     self.refreshColor = [[PTCProvider sharedProvider] colorForKey:@"kPTCFontColor"] ? : [UIColor lightTextColor];
+    self.refreshLabel.text = self.pullString;
     [self hideRefreshLabel];
 }
 
@@ -90,17 +93,15 @@
 
 %new - (void)refreshForCurrentOffset: (CGFloat)offset {
     CGFloat height = [[PTCProvider sharedProvider] floatForKey:@"kPTCActivationHeight"];
-    CGFloat clearHeight = 150;
+    CGFloat clearHeight = [[PTCProvider sharedProvider] floatForKey:@"kPTCClearHeight"];
     CGFloat alpha = -offset/height;
     CGFloat bravo = -offset/clearHeight;
 
     if (alpha <= 0.2) {
+    [self hideRefreshLabel];
         if (self.isClearing) {
             self.isClearing = NO;
             [self clearNotifications];
-        }
-        if (alpha <= 0) {
-            [self hideRefreshLabel];
         }
         return;
     }
@@ -126,17 +127,18 @@
         if (!self.isRefreshing) {
             self.isRefreshing = YES;
             AudioServicesPlaySystemSound(1520);
-            self.refreshLabel.text = @"Release To Clear";
+            self.refreshLabel.text = self.releaseString;
             [UIView animateWithDuration:0.7 delay:0 usingSpringWithDamping:0.4 initialSpringVelocity:8 options:UIViewAnimationOptionAllowUserInteraction animations:^{
                 [self updateRefreshLabel];
                 self.refreshLabel.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
             } completion:nil];
         }
+        self.collectionView.alpha = 1 - (alpha - 0.8);
     } else {
         if (self.isRefreshing) {
             self.isRefreshing = NO;
             AudioServicesPlaySystemSound(1519);
-            self.refreshLabel.text = @"Pull To Clear";
+            self.refreshLabel.text = self.pullString;
         }
     }
 }

@@ -22,6 +22,8 @@
 @interface NCNotificationListViewController : UICollectionViewController
 @property(nonatomic, retain) UILabel *refreshLabel;
 @property(nonatomic, retain) UIColor *refreshColor;
+@property(nonatomic, retain) NSString *pullString;
+@property(nonatomic, retain) NSString *releaseString;
 @property(nonatomic, assign) BOOL isRefreshing;
 @property(nonatomic, assign) BOOL isClearing;
 - (void)refreshForCurrentOffset:(CGFloat)offset;
