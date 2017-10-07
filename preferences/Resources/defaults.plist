@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>kPTCActivationHeight</key>
+	<string>80</string>
+	<key>kPTCClearHeight</key>
+	<string>140</string>
+	<key>kPTCEnabled</key>
+	<true/>
+	<key>kPTCFontColor</key>
+	<string>EAEAEA:1.000000</string>
+	<key>kPTCFontName</key>
+	<string>.SFUIDisplay-Regular</string>
+	<key>kPTCFontSize</key>
+	<string>28</string>
+	<key>kPTCPullString</key>
+	<string>Pull To Clear</string>
+	<key>kPTCReleaseString</key>
+	<string>Release To Clear</string>
+</dict>
+</plist>

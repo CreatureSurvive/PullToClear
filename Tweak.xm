@@ -44,12 +44,12 @@
 
     if (!self.refreshLabel) {
 
-        CGFloat fontSize = [[PTCProvider sharedProvider] floatForKey:@"kPTCFontSize"] ? : 17.0f;
-        NSString *fontName = [[PTCProvider sharedProvider] stringForKey:@"kPTCFontName"] ? : @".SFUIDisplay-Regular";
+        CGFloat fontSize = [[PTCProvider sharedProvider] floatForKey:@"kPTCFontSize"];
+        NSString *fontName = [[PTCProvider sharedProvider] stringForKey:@"kPTCFontName"];
 
         self.refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.collectionView.frame.size.width, [[PTCProvider sharedProvider] floatForKey:@"kPTCActivationHeight"])];
         self.refreshLabel.textAlignment = NSTextAlignmentCenter;
-        self.refreshLabel.font = [UIFont loadFontWithName:fontName size:fontSize] ? : [UIFont systemFontOfSize:17];
+        self.refreshLabel.font = [UIFont loadFontWithName:fontName size:fontSize];
         [self.collectionView addSubview:self.refreshLabel];
     }
 }
@@ -59,12 +59,12 @@
     if (![[PTCProvider sharedProvider] boolForKey:@"kPTCEnabled"]) return;
 
     self.collectionView.alpha = 1;
-    CGFloat fontSize = [[PTCProvider sharedProvider] floatForKey:@"kPTCFontSize"] ? : 17.0f;
-    NSString *fontName = [[PTCProvider sharedProvider] stringForKey:@"kPTCFontName"] ? : @".SFUIDisplay-Regular";
+    CGFloat fontSize = [[PTCProvider sharedProvider] floatForKey:@"kPTCFontSize"];
+    NSString *fontName = [[PTCProvider sharedProvider] stringForKey:@"kPTCFontName"];
     self.pullString = [[PTCProvider sharedProvider] objectForKey:@"kPTCPullString"];
     self.releaseString = [[PTCProvider sharedProvider] objectForKey:@"kPTCReleaseString"];
-    self.refreshLabel.font = [UIFont loadFontWithName:fontName size:fontSize] ? : [UIFont systemFontOfSize:17];
-    self.refreshColor = [[PTCProvider sharedProvider] colorForKey:@"kPTCFontColor"] ? : [UIColor lightTextColor];
+    self.refreshLabel.font = [UIFont loadFontWithName:fontName size:fontSize];
+    self.refreshColor = [[PTCProvider sharedProvider] colorForKey:@"kPTCFontColor"];
     self.refreshLabel.text = self.pullString;
     [self hideRefreshLabel];
 }
@@ -98,7 +98,7 @@
     CGFloat bravo = -offset/clearHeight;
 
     if (alpha <= 0.2) {
-    [self hideRefreshLabel];
+        [self hideRefreshLabel];
         if (self.isClearing) {
             self.isClearing = NO;
             [self clearNotifications];

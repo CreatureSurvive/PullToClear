@@ -14,8 +14,6 @@
 				<string>Enabled</string>
 				<key>key</key>
 				<string>kPTCEnabled</string>
-				<key>default</key>
-				<false/>
 				<key>isGroupToggle</key>
 				<true/>
 				<key>PostNotification</key>
@@ -27,8 +25,6 @@
 			<dict>
 				<key>cell</key>
 				<string>PSEditTextCell</string>
-				<key>default</key>
-				<string>40</string>
 				<key>detail</key>
 				<string>PSDetailController</string>
 				<key>height</key>
@@ -54,8 +50,6 @@
 			<dict>
 				<key>cell</key>
 				<string>PSSliderCell</string>
-				<key>default</key>
-				<real>40</real>
 				<key>isContinuous</key>
 				<true/>
 				<key>key</key>
@@ -81,8 +75,6 @@
 			<dict>
 				<key>cell</key>
 				<string>PSEditTextCell</string>
-				<key>default</key>
-				<string>150</string>
 				<key>detail</key>
 				<string>PSDetailController</string>
 				<key>height</key>
@@ -108,8 +100,6 @@
 			<dict>
 				<key>cell</key>
 				<string>PSSliderCell</string>
-				<key>default</key>
-				<real>40</real>
 				<key>isContinuous</key>
 				<true/>
 				<key>key</key>
@@ -135,8 +125,6 @@
 			<dict>
 				<key>cell</key>
 				<string>PSLinkListCell</string>
-				<key>default</key>
-				<string>.SFUIDisplay-Regular</string>
 				<key>detail</key>
 				<string>CSListFontsController</string>
 				<key>key</key>
@@ -158,8 +146,6 @@
 				<string>PSEditTextCell</string>
 				<key>isDecimalPad</key>
 				<true/>
-				<key>default</key>
-				<string>17</string>
 				<key>detail</key>
 				<string>PSDetailController</string>
 				<key>key</key>
@@ -181,10 +167,10 @@
 				<string>CSAlertColorCell</string>
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
+				<key>defaultsPath</key>
+				<string>/Library/PreferenceBundles/PullToClear.bundle</string>
 				<key>PostNotification</key>
 				<string>com.creaturecoding.PullToClear.prefschanged</string>
-				<key>fallback</key>
-				<string>#E8ECEE:1.000000</string>
 				<key>key</key>
 				<string>kPTCFontColor</string>
 				<key>label</key>
@@ -194,8 +180,6 @@
 			<dict>
 				<key>cell</key>
 				<string>PSEditTextCell</string>
-				<key>default</key>
-				<string>Release To Clear</string>
 				<key>detail</key>
 				<string>PSDetailController</string>
 				<key>key</key>
@@ -213,8 +197,6 @@
 			<dict>
 				<key>cell</key>
 				<string>PSEditTextCell</string>
-				<key>default</key>
-				<string>Pull To Clear</string>
 				<key>detail</key>
 				<string>PSDetailController</string>
 				<key>key</key>

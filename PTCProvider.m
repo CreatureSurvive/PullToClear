@@ -21,8 +21,9 @@
     dispatch_once(&once, ^{
         NSString *tweakId = @"com.creaturecoding.PullToClear";
         NSString *prefsNotification = [tweakId stringByAppendingString:@".prefschanged"];
+        NSString *defaultsPath = @"/Library/PreferenceBundles/PullToClear.bundle/defaults.plist";
 
-        sharedProvider = [[CSPreferencesProvider alloc] initWithTweakID:tweakId defaults:nil postNotification:prefsNotification notificationCallback:nil];
+        sharedProvider = [[CSPreferencesProvider alloc] initWithTweakID:tweakId defaultsPath:defaultsPath postNotification:prefsNotification notificationCallback:nil];
     });
     return sharedProvider;
 }
