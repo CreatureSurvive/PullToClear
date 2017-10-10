@@ -164,7 +164,7 @@
 				<key>cell</key>
 				<string>PSLinkCell</string>
 				<key>cellClass</key>
-				<string>CSAlertColorCell</string>
+				<string>CSColorDisplayCell</string>
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
 				<key>defaultsPath</key>
