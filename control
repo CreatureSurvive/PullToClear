@@ -1,6 +1,6 @@
 Package: com.creaturecoding.pulltoclear
 Name: PullToClear
-Depends: mobilesubstrate
+Depends: mobilesubstrate, com.creaturesurvive.libcscolorpicker, com.creaturecoding.libcspreferences
 Version: 0.0.1
 Architecture: iphoneos-arm
 Description: An awesome MobileSubstrate tweak!
