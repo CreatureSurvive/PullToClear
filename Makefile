@@ -10,12 +10,9 @@
 ARCHS = armv7 armv7s arm64
 GO_EASY_ON_ME=1
 TARGET = iphone:clang:latest:latest
-# SDK_VERSION = 10.1
-# THEOS_DEVICE_IP = 192.168.86.131
-# THEOS_DEVICE_PORT=22
 
-# FINALPACKAGE = 0
-# DEBUG = 1
+FINALPACKAGE = 1
+DEBUG = 0
 
 include $(THEOS)/makefiles/common.mk
 

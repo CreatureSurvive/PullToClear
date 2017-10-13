@@ -46,7 +46,7 @@
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
 			</dict>
-			
+
 			<dict>
 				<key>cell</key>
 				<string>PSSliderCell</string>
@@ -55,13 +55,13 @@
 				<key>key</key>
 				<string>kPTCActivationHeight</string>
 				<key>leftImage</key>
-				<string></string>
+				<string/>
 				<key>max</key>
-				<real>100</real>
+				<real>150</real>
 				<key>min</key>
-				<real>0.0</real>
+				<real>0.1</real>
 				<key>rightImage</key>
-				<string></string>
+				<string/>
 				<key>showValue</key>
 				<false/>
 				<key>description</key>
@@ -71,7 +71,7 @@
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
 			</dict>
-			
+
 			<dict>
 				<key>cell</key>
 				<string>PSEditTextCell</string>
@@ -96,7 +96,7 @@
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
 			</dict>
-			
+
 			<dict>
 				<key>cell</key>
 				<string>PSSliderCell</string>
@@ -105,13 +105,13 @@
 				<key>key</key>
 				<string>kPTCClearHeight</string>
 				<key>leftImage</key>
-				<string></string>
+				<string/>
 				<key>max</key>
-				<real>100</real>
+				<real>200</real>
 				<key>min</key>
-				<real>0.0</real>
+				<real>0.1</real>
 				<key>rightImage</key>
-				<string></string>
+				<string/>
 				<key>showValue</key>
 				<false/>
 				<key>description</key>
@@ -176,7 +176,7 @@
 				<key>label</key>
 				<string>Font Color</string>
 			</dict>
-			
+
 			<dict>
 				<key>cell</key>
 				<string>PSEditTextCell</string>
@@ -193,7 +193,7 @@
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
 			</dict>
-			
+
 			<dict>
 				<key>cell</key>
 				<string>PSEditTextCell</string>
@@ -209,6 +209,65 @@
 				<string>com.creaturecoding.PullToClear.prefschanged</string>
 				<key>defaults</key>
 				<string>com.creaturecoding.PullToClear</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string>CreatureCoding © 2017</string>
+				<key>footerAlignment</key>
+				<integer>1</integer>
+			</dict>
+
+			<dict>
+				<key>action</key>
+				<string>pushToView:</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>pushToPlist</key>
+				<string>Support</string>
+				<key>label</key>
+				<string>Support &amp; Creator</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>detail</key>
+				<string>CSPBackupListViewController</string>
+				<key>isController</key>
+				<true/>
+				<key>PostNotification</key>
+				<string>com.creaturesurvive.motuumls.prefschanged</string>
+				<key>label</key>
+				<string>Backup &amp; Restore</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>detail</key>
+				<string>CSPChangeLogController</string>
+				<key>isController</key>
+				<true/>
+				<key>label</key>
+				<string>ChangeLog</string>
+				<key>changes</key>
+				<array>
+					<dict>
+						<key>0.2.1</key>
+						<array>
+							<string>initial public release</string>
+						</array>
+					</dict>
+					<dict>
+						<key>0.0.1</key>
+						<array>
+							<string>initial release</string>
+						</array>
+					</dict>
+				</array>
 			</dict>
 
 		</array>
