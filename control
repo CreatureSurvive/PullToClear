@@ -1,10 +1,10 @@
 Package: com.creaturecoding.pulltoclear
 Name: PullToClear
 Depends: mobilesubstrate, com.creaturesurvive.libcscolorpicker, com.creaturecoding.libcspreferences
-Version: 0.2.1
+Version: 0.2.2
 Architecture: iphoneos-arm
 Description: PullToClear notifications on LS & NC
 Maintainer: CreatureSurvive
-Depiction: https://creaturesurvive.com/depictions/com.creaturecoding.pulltoclear/index.htmls
+Depiction: https://creaturesurvive.github.io/depictions/com.creaturecoding.pulltoclear/index.html
 Author: CreatureSurvive
 Section: Tweaks
