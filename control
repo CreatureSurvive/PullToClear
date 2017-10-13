@@ -3,7 +3,7 @@ Name: PullToClear
 Depends: mobilesubstrate, com.creaturesurvive.libcscolorpicker, com.creaturecoding.libcspreferences
 Version: 0.2.1
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: PullToClear notifications on LS & NC
 Maintainer: CreatureSurvive
 Depiction: https://creaturesurvive.com/depictions/com.creaturecoding.pulltoclear/index.htmls
 Author: CreatureSurvive
