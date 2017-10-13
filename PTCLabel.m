@@ -31,14 +31,14 @@
     NSMutableParagraphStyle *attributedStringParagraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     attributedStringParagraphStyle.alignment = NSTextAlignmentCenter;
 
-    CGFloat fontSize = [[PTCProvider sharedProvider] floatForKey:@"kPTCFontSize"] ? : 17.0f;
-    NSString *fontName = [[PTCProvider sharedProvider] stringForKey:@"kPTCFontName"] ? : @".SFUIDisplay-Regular";
+    CGFloat fontSize = [[PTCProvider sharedProvider] floatForKey:@"kPTCFontSize"];
+    NSString *fontName = [[PTCProvider sharedProvider] stringForKey:@"kPTCFontName"];
 
-    self.refreshString = [[PTCProvider sharedProvider] objectForKey:@"kPTCRefreshString"] ? : @"Release To Clear";
-    self.pullString = [[PTCProvider sharedProvider] objectForKey:@"kPTCPullString"] ? : @"Pull To Clear";
+    self.refreshString = [[PTCProvider sharedProvider] objectForKey:@"kPTCRefreshString"];
+    self.pullString = [[PTCProvider sharedProvider] objectForKey:@"kPTCPullString"];
     self.paragraphStyle = attributedStringParagraphStyle;
     self.activationHeight = [[PTCProvider sharedProvider] floatForKey:@"kPTCActivationHeight"];
-    self.font = [UIFont loadFontWithName:fontName size:fontSize] ? : [UIFont systemFontOfSize:17];
+    self.font = [UIFont loadFontWithName:fontName size:fontSize];
 
     self.textAlignment = NSTextAlignmentCenter;
     self.text = self.pullString;
