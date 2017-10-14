@@ -31,6 +31,9 @@
 - (void)hideRefreshLabel;
 - (void)clearNotifications;
 - (void)prepairForRefresh;
+- (void)addRefreshLabelIfNecessary;
+- (void)prepairRefreshLabelForReuse;
+- (void)prepairCollectionViewForReuse;
 @end
 
 @interface NCNotificationPriorityListViewController : NCNotificationListViewController
